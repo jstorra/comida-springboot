@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" type="module" defer></script>
+    <title>Platos</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">PLATOS</h1>
+    </header>
+    <main>
+        <h2>Registrar o Actualizar Plato</h2>
+        <form>
+            <ul>
+              <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
+              </li>
+              <li>
+                <label for="descripcion">Descripcion:</label>
+                <input id="descripcion" name="descripcion" required />
+              </li>
+              <li>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required></input>
+              </li>
+              <li>
+                <label for="imagen">Imagen:</label>
+                <input id="imagen" name="imagen" required></input>
+              </li>
+            </ul>
+            <button class="btnS">Guardar Plato</button>
+          </form>
+          <section></section>
+    </main>
+    <footer>
+        <p>Developed by <a href="https://github.com/jstorra" target="_blank" rel="noopener">@Jstorra</a></p>
+    </footer>
+</body>
+</html>
