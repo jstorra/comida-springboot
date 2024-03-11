@@ -2,7 +2,10 @@ package jstorra.plato.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
+@Table(name = "platos")
 public class Plato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +22,9 @@ public class Plato {
 
     @Column(name = "imagen")
     private String imagen;
+
+    @OneToMany(mappedBy = "plato", cascade = CascadeType.ALL)
+    private List<Factura> facturas;
 
     public Long getId() {
         return id;
@@ -58,5 +64,13 @@ public class Plato {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
     }
 }
