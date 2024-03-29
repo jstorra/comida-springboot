@@ -37,7 +37,7 @@ public class FacturaService {
 
     public ResponseEntity<Factura> getFacturaById(Object id) {
         try {
-            Long parseId = Long.valueOf(id.toString());
+            Integer parseId = Integer.parseInt(id.toString());
             Factura factura = facturaRepository.findById(parseId).orElse(null);
             if (factura == null)
                 throw new FacturaNotFoundException("La factura con ID " + id + " no existe.");
@@ -55,7 +55,7 @@ public class FacturaService {
 
     public ResponseEntity<Factura> updateFactura(Object id, FacturaDTO facturaDTO) {
         try {
-            Long parseId = Long.valueOf(id.toString());
+            Integer parseId = Integer.parseInt(id.toString());
             Factura facturaToUpdate = facturaRepository.findById(parseId)
                     .orElseThrow(() -> new FacturaNotFoundException("La factura con ID " + id + " no existe."));
 

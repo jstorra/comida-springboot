@@ -23,7 +23,7 @@ public class PlatoController {
     }
 
     @GetMapping("/get/{id}")
-    public Plato getPlatoById(@PathVariable Long id) {
+    public Plato getPlatoById(@PathVariable Integer id) {
         return platoService.getPlatoById(id);
     }
 
@@ -38,7 +38,7 @@ public class PlatoController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void eliminarPlato(@PathVariable Long id) {
+    public void eliminarPlato(@PathVariable Integer id) {
         platoService.eliminarPlato(id);
     }
 }

@@ -21,7 +21,7 @@ public class PlatoService {
         return platoRepository.findAll();
     }
 
-    public Plato getPlatoById(Long id) {
+    public Plato getPlatoById(Integer id) {
         Optional<Plato> optionalPlato = platoRepository.findById(id);
 
         if (optionalPlato.isPresent()) {
@@ -51,7 +51,7 @@ public class PlatoService {
         }
     }
 
-    public void eliminarPlato(Long id) {
+    public void eliminarPlato(Integer id) {
         Optional<Plato> optionalPlato = platoRepository.findById(id);
 
         if (optionalPlato.isPresent()){

@@ -6,8 +6,8 @@ public class FacturaDTO {
     private Timestamp fechaCompra;
     private double total;
     private String tipoPago;
-    private Long platoId;
-    private Long clienteId;
+    private Integer platoId;
+    private Integer clienteId;
 
     public Timestamp getFechaCompra() {
         return fechaCompra;
@@ -33,19 +33,19 @@ public class FacturaDTO {
         this.tipoPago = tipoPago;
     }
 
-    public Long getPlatoId() {
+    public Integer getPlatoId() {
         return platoId;
     }
 
-    public void setPlatoId(Long platoId) {
+    public void setPlatoId(Integer platoId) {
         this.platoId = platoId;
     }
 
-    public Long getClienteId() {
+    public Integer getClienteId() {
         return clienteId;
     }
 
-    public void setClienteId(Long clienteId) {
+    public void setClienteId(Integer clienteId) {
         this.clienteId = clienteId;
     }
 }
